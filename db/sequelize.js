@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize');
 
+
 let sequelize
 
 if(process.env.NODE_ENV === 'production') {
@@ -12,7 +13,7 @@ if(process.env.NODE_ENV === 'production') {
     logging: true
   })
 } else {
-  sequelize = new Sequelize('sequelizeok', 'me', 'password', {
+  sequelize = new Sequelize('jardins', 'me', 'password', {
     host: 'localhost',
     dialect: 'postgres',
     dialectOptions: {
@@ -22,10 +23,11 @@ if(process.env.NODE_ENV === 'production') {
   })
 }
 
+
 const initDb = () => {
   return sequelize.sync()
 }
 
 module.exports = {
-  initDb, Product, User
+  initDb
 }
