@@ -20,8 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER,
     collection: Datatypes.DATE,
     secretCode: Datatypes.INTEGER,
-  },
-   {
+  }, {
     sequelize,
     modelName: 'Order',
   });
