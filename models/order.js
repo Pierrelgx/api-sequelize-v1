@@ -15,9 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Order.init({
-    price: DataTypes.DECIMAL,
-    quantity: DataTypes.INTEGER
-  }, {
+    product: Datatypes.INTEGER,
+    amont: DataTypes.DECIMAL,
+    quantity: DataTypes.INTEGER,
+    collection: Datatypes.DATE,
+    secretCode: Datatypes.INTEGER,
+  },
+   {
     sequelize,
     modelName: 'Order',
   });
