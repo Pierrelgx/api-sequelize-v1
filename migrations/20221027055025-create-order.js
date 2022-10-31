@@ -12,10 +12,16 @@ module.exports = {
       product: {
         type: Sequelize.INTEGER
       },
-      price: {
+      amount: {
         type: Sequelize.DECIMAL
       },
       quantity: {
+        type: Sequelize.INTEGER
+      },
+      collection: {
+        type: Sequelize.DATE
+      },
+      secretCode: {
         type: Sequelize.INTEGER
       },
       createdAt: {
