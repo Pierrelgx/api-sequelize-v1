@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Order.hasMany(models.Product);
+      Order.belongsTo(models.User);
     }
   }
   Order.init({
@@ -21,9 +22,5 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Order',
   });
 
-  Order.associate = function(models) {
-    Order.hasMany(models.Product);
-    Order.belongsTo(models.User);
-  };
   return Order;
 };
